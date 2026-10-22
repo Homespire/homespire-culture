@@ -100,7 +100,9 @@ a{color:inherit}
 #c0  .bleed img{ width:132%; max-width:none; object-position:50% 50% }
 #c5  .bleed img{ object-position:82% 40% }
 #c10 .bleed img{ object-position:50% 42% }
-#c12 .bleed img{ object-position:50% 30% }
+/* Close: the hero photo, mirrored on the wrapper so parallax transforms on the img still work. */
+#c12 .bleed{ transform:scaleX(-1) }
+#c12 .bleed img{ width:132%; max-width:none; object-position:50% 50% }
 #c3 .panel{ background:transparent; overflow:visible; z-index:2 }
 #c3 .panel video{ position:absolute; top:0; left:-5%; right:auto; bottom:auto;
                    width:110%; max-width:none; height:100%;
@@ -115,7 +117,7 @@ a{color:inherit}
 @media (max-width:900px){
   #c0  .bleed img{ width:100%; object-position:27% 52% }
   #c5  .bleed img{ object-position:78% 40% }
-  #c12 .bleed img{ object-position:52% 26% }
+  #c12 .bleed img{ width:100%; object-position:27% 52% }
 }
 @keyframes ken{ from{transform:scale(1.14)} to{transform:scale(1.0)} }
 
@@ -611,6 +613,13 @@ a{color:inherit}
       <div class="stat" data-rv style="--d:360ms"><i class="chip-i"><svg class="ico"><use href="#i-award"/></svg></i><b>Top Workplace</b><span>Recognized for a culture our people experience, believe in, and help build.</span></div>
       <div class="stat" data-rv style="--d:440ms"><i class="chip-i"><svg class="ico"><use href="#i-trend"/></svg></i><i class="unit">Inc.</i><b data-count="5000" data-plain>0</b><span>Recognized for growth that creates opportunity for our people.</span></div>
     </div>
+    <div data-rv style="--d:460ms; display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:clamp(24px,3.6vw,56px); margin-top:clamp(32px,5vh,56px); opacity:.85" aria-label="Awards">
+      <img src="assets/img/badges/nmp-top-mortgage-employer.png" alt="NMP Top Mortgage Employer" style="height:clamp(72px,8.4vw,124px); width:auto">
+      <img src="assets/img/badges/bbj-best-places-to-work.png" alt="BBJ Best Places to Work winner" style="height:clamp(72px,8.4vw,124px); width:auto">
+      <img src="assets/img/badges/top-workplaces.png" alt="Top Workplaces" style="height:clamp(72px,8.4vw,124px); width:auto">
+      <img src="assets/img/badges/top-10-customer-satisfaction.png" alt="Top 10 Company in Customer Satisfaction, 2023" style="height:clamp(72px,8.4vw,124px); width:auto">
+      <img src="assets/img/badges/scotsman-top-workplaces.png" alt="Scotsman Guide Top Workplaces" style="height:clamp(72px,8.4vw,124px); width:auto">
+    </div>
   </div></div>
 </section>
 
@@ -640,7 +649,7 @@ a{color:inherit}
 <!-- ══════════ 3 · LOAN LAB VIDEO ═════════════════════ -->
 <section class="ch duo rev grad-rich" id="c3" data-label="The Loan Lab">
   <div class="panel" data-rv="mask">
-    <iframe src="assets/embed/loan-lab-chat.html" title="An animated Loan Lab chat thread" loading="eager" scrolling="no" allowtransparency="true" style="position:absolute; inset:0; width:100%; height:100%; border:0; background:transparent; color-scheme:normal"></iframe>
+    <iframe src="assets/embed/loan-lab-chat-v2.html" title="An animated Loan Lab chat thread" loading="eager" scrolling="no" allowtransparency="true" style="position:absolute; inset:0; width:100%; height:100%; border:0; background:transparent; color-scheme:normal"></iframe>
   </div>
   <div class="copy"><div>
     <p class="eyebrow" data-rv>Inside the Loan Lab</p>
@@ -722,7 +731,7 @@ a{color:inherit}
     </div>
   </div></div>
   <div class="panel" data-rv="mask">
-    <video src="assets/video/falling-collage-portrait.webm" preload="auto" autoplay muted loop playsinline aria-label="A collage of Homespire teammates celebrating and connecting."></video>
+    <video src="assets/video/falling-collage-portrait-v3.webm" preload="auto" autoplay muted loop playsinline aria-label="A collage of Homespire teammates celebrating and connecting."></video>
   </div>
 </section>
 
@@ -766,9 +775,7 @@ a{color:inherit}
     </p>
     <div class="rules">
       <div data-rv style="--d:250ms"><i class="chip-i"><svg class="ico"><use href="#i-shoe"/></svg></i><h4>HomespireMOVE</h4><p>Philanthropy, networking and employee engagement behind the causes our people actually care about. Success means making a difference, not just closing loans.</p></div>
-      <div data-rv style="--d:305ms"><i class="chip-i"><svg class="ico"><use href="#i-shield"/></svg></i><h4>Homes for Our Troops</h4><p>Ribbon cuttings for specially adapted, mortgage-free homes for severely injured veterans.</p></div>
-      <div data-rv style="--d:360ms"><i class="chip-i"><svg class="ico"><use href="#i-flag"/></svg></i><h4>The Charity Classic</h4><p>Our golf outing that pulled the team together to compete at something other than volume, for a cause bigger than any of us.</p></div>
-      <div data-rv style="--d:415ms"><i class="chip-i"><svg class="ico"><use href="#i-box"/></svg></i><h4>Food, backpack &amp; toy drives</h4><p>Conference rooms turned into staging areas for food drives, backpack drives stocked with school supplies, and Angel Tree and toy drives, filled by people who signed up on their own time.</p></div>
+      <div data-rv style="--d:305ms"><i class="chip-i"><svg class="ico"><use href="#i-box"/></svg></i><h4>Food, backpack &amp; toy drives</h4><p>Conference rooms turned into staging areas for food drives, backpack drives stocked with school supplies, and Angel Tree and toy drives, filled by people who signed up on their own time.</p></div>
     </div>
   </div></div>
 </section>
@@ -851,7 +858,7 @@ a{color:inherit}
 
 <!-- ══════════ 12 · CLOSE ═════════════════════════════ -->
 <section class="ch hero shot" id="c12" data-label="Join us">
-  <div class="bleed"><img src="assets/img/rob-pointing.webp" alt="A Homespire teammate in a Homespire tee, grinning and pointing straight at the camera." data-px></div>
+  <div class="bleed"><img src="assets/img/marty-joy.webp" alt="A Homespire team member laughing, arms thrown wide." data-px></div>
   <div class="scrim scrim-hero"></div>
   <div class="pad"><div class="wrap"><div class="col" style="max-width:min(720px,58%)">
     <p class="eyebrow" data-rv>THE HOMESPIRE DIFFERENCE</p>
@@ -911,6 +918,8 @@ const cs = document.getElementById('c6'), cv = cs && cs.querySelector('video');
       const go = () => v.play().catch(() => {});
       go(); v.addEventListener('canplay', go, { once: true });
     });
+    
+    
 (function(){
   const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const chapters = [...document.querySelectorAll('.ch')];
