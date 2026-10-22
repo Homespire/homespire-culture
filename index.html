@@ -309,6 +309,8 @@ a{color:inherit}
   .ch.duo{ grid-template-columns:1fr; grid-auto-rows:min-content }
   .ch.duo > .panel{ height:50svh }
   .ch.duo.rev > .panel{ order:0 }
+  /* Loan Lab chat needs more height than a photo to show a readable stretch of thread. */
+  #c3.ch.duo > .panel{ height:72svh }
   .ch.duo > .copy{ padding:clamp(40px,6svh,72px) var(--gutter) }
 }
 @media (max-width:760px){
@@ -649,7 +651,7 @@ a{color:inherit}
 <!-- ══════════ 3 · LOAN LAB VIDEO ═════════════════════ -->
 <section class="ch duo rev grad-rich" id="c3" data-label="The Loan Lab">
   <div class="panel" data-rv="mask">
-    <iframe src="assets/embed/loan-lab-chat-v4.html" title="An animated Loan Lab chat thread" loading="eager" scrolling="no" allowtransparency="true" style="position:absolute; inset:0; width:100%; height:100%; border:0; background:transparent; color-scheme:normal"></iframe>
+    <iframe src="assets/embed/loan-lab-chat-v4.html?m=2" title="An animated Loan Lab chat thread" loading="eager" scrolling="no" allowtransparency="true" style="position:absolute; inset:0; width:100%; height:100%; border:0; background:transparent; color-scheme:normal"></iframe>
   </div>
   <div class="copy"><div>
     <p class="eyebrow" data-rv>Inside the Loan Lab</p>
@@ -869,7 +871,7 @@ a{color:inherit}
       Build your business, grow with a team that has your back, and discover a culture where you
       can do more, be more, and truly feel at home.
     </p>
-    <a class="btn" data-rv style="--d:260ms" href="mailto:pkarnani@homespiremortgage.com?subject=Homespire%20Culture%20%E2%80%94%20let's%20talk">
+    <a class="btn" data-rv style="--d:260ms" href="mailto:marketing@homespiremortgage.com?subject=Homespire%20Culture%20%E2%80%94%20let's%20talk">
       Start a conversation
       <svg width="15" height="11" viewBox="0 0 15 11" fill="none" aria-hidden="true"><path d="M1 5.5h12M9 1.5l4 4-4 4" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
